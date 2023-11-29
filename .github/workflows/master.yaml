@@ -1,0 +1,17 @@
+name: Mi Primer GitHub Action
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout código
+      uses: actions/checkout@v2
+
+    - name: Mostrar mensaje
+      run: echo "¡Hola, este es mi primer GitHub Action!"
