@@ -34,7 +34,6 @@ jobs:
   merge:
     needs: tests
     runs-on: ubuntu-latest
-    if: github.event_name == 'push' && github.event_name != 'pull_request' && github.ref == 'refs/heads/main' && success()
 
     steps:
     - name: Checkout code
