@@ -29,6 +29,7 @@ jobs:
           echo "Test results found."
         else
           echo "No test results found. Failing the build."
+          exit 1
         fi
         
   merge:
@@ -38,13 +39,6 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
-      
-    - name: Install GitHub CLI
-      run: |
-        sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key C99B11DEB97541F0
-        sudo apt-add-repository https://cli.github.com/packages
-        sudo apt-get update
-        sudo apt-get install gh
 
     - name: Set up Git
       run: |
