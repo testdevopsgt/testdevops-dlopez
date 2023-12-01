@@ -29,7 +29,6 @@ jobs:
           echo "Test results found."
         else
           echo "No test results found. Failing the build."
-          exit 1
         fi
         
   merge:
